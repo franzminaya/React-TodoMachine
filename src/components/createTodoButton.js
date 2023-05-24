@@ -1,9 +1,14 @@
 import React from "react";
 import "../styles/CreateTodoButton.css"
 
-function CreateTodoButton(){
+function CreateTodoButton({agregarTodo}){
+
+    
+
     return(
-        <button className="createTodoButton">+</button>
+        <button className="createTodoButton"
+        onClick={agregarTodo}
+        >+</button>
     )
 }
 

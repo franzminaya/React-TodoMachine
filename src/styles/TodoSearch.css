@@ -1,0 +1,38 @@
+.label-container{
+    width: 45vw;
+    min-width: 220px;
+    height: 32px;
+    padding: 0 5px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 25px;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    
+
+}
+
+.label-container:focus-within{
+    border: 1px solid skyblue;
+    border-radius: 8px;
+}
+
+.inputSearch{
+    height: 100%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.search-icon{
+    color: grey;
+}
+
+

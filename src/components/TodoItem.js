@@ -1,12 +1,17 @@
 import React from "react";
 import "../styles/TodoItem.css"
+import { FaCheck } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
 
-function TodoItem({text,completada}){
+function TodoItem({text,completada,onComplete,deleteTodo}){
+
+   
+
     return(
-        <li>
-            <span className={completada? "completed" : ""}>V</span>
-            <p>{text}</p>
-            <span>X</span>
+        <li className={completada? "todoItem completed" : "todoItem"}>
+            <FaCheck className={completada? "icon check-icon completed" : "icon check-icon"} onClick={()=>onComplete(text)}/>
+            <p className="text">{text}</p>
+            <MdDeleteForever className="icon delete-icon" onClick={()=>deleteTodo(text)} />
         </li>
     )
 }

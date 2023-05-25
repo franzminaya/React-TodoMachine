@@ -1,24 +1,20 @@
 import React from "react";
 import "../styles/TodoCounter.css"
 import Confetti from "react-confetti";
-import { useState } from "react";
-
 
 
 function TodoCounter({total,completed}) {
 
-   
-
     if(total && total===completed){
         return(
             <>
-              <Confetti className="confeti"
+                <Confetti className="confeti"
                     gravity={0.05} 
                 />
-            <h1 className="todoCounter">
-                
-                Felicidades Complestaste {completed} de {total} TODOs <img className="contrat-gif" src="https://media.tenor.com/8z51fJ6fIfoAAAAi/like-thumbs-up.gif" alt="Gif de felicidades" />
-            </h1>
+                <h1 className="todoCounter">
+                    
+                    Felicidades Complestaste {completed} de {total} TODOs <img className="contrat-gif" src="https://media.tenor.com/8z51fJ6fIfoAAAAi/like-thumbs-up.gif" alt="Gif de felicidades" />
+                </h1>
             </>
             
         )

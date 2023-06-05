@@ -1,14 +1,12 @@
 .todoItem{
     display: flex;
-    width: 50vw;
-    min-width: 240px;
+    width: 100%;
     justify-content: flex-start;
     padding: 10px;
     margin-top: 20px;
     box-shadow: grey 1px 1px 4px 1px;
     border: none;
     border-radius: 5px;
-    font-family: 'Indie Flower', cursive;
     font-size: 22px;
     align-items: center;
     color: white;
@@ -17,6 +15,7 @@
 }
 .text{
     margin-right: 10px;
+    font-family: 'Indie Flower', cursive;
 }
 
 .todoItem:nth-child(3n + 1){

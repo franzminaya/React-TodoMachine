@@ -3,15 +3,15 @@ import "../styles/TodoItem.css"
 import { FaCheck } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 
-function TodoItem({text,completada,onComplete,deleteTodo}){
+function TodoItem({text,completada,onCompleteTodo,onDeleteTodo}){
 
    
 
     return(
         <li className={completada? "todoItem completed" : "todoItem"}>
-            <FaCheck className={completada? "icon check-icon completed" : "icon check-icon"} onClick={()=>onComplete(text)}/>
+            <FaCheck className={completada? "icon check-icon completed" : "icon check-icon"} onClick={()=>onCompleteTodo(text)}/>
             <p className="text">{text}</p>
-            <MdDeleteForever className="icon delete-icon" onClick={()=>deleteTodo(text)} />
+            <MdDeleteForever className="icon delete-icon" onClick={()=>onDeleteTodo(text)} />
         </li>
     )
 }

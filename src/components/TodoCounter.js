@@ -1,11 +1,17 @@
 import React from "react";
 import "../styles/TodoCounter.css"
 import Confetti from "react-confetti";
+import { TodoContext } from "../TodoContext/TodoContext";
 
 
-function TodoCounter({total,completed}) {
+function TodoCounter() {
 
-    if(total && total===completed){
+    const {
+        completedTodos,
+        totalTodos
+    } = React.useContext(TodoContext)
+
+    if(totalTodos && totalTodos===completedTodos){
         return(
             <>
                 <Confetti className="confeti"
@@ -13,7 +19,7 @@ function TodoCounter({total,completed}) {
                 />
                 <h1 className="todoCounter">
                     
-                    Felicidades Complestaste {completed} de {total} TODOs <img className="contrat-gif" src="https://media.tenor.com/8z51fJ6fIfoAAAAi/like-thumbs-up.gif" alt="Gif de felicidades" />
+                    Felicidades Complestaste {completedTodos} de {totalTodos} TODOs <img className="contrat-gif" src="https://media.tenor.com/8z51fJ6fIfoAAAAi/like-thumbs-up.gif" alt="Gif de felicidades" />
                 </h1>
             </>
             
@@ -21,7 +27,7 @@ function TodoCounter({total,completed}) {
     }else{ 
         return(
             <h1 className="todoCounter">
-                Has Completado <span>{completed}</span> de <span>{total}</span> TODOs <img className="contrat-gif" src="https://media.tenor.com/73zLIGSkI08AAAAi/yum-yumyum.gif" alt="Gif normal" />
+                Has Completado <span>{completedTodos}</span> de <span>{totalTodos}</span> TODOs <img className="contrat-gif" src="https://media.tenor.com/73zLIGSkI08AAAAi/yum-yumyum.gif" alt="Gif normal" />
             </h1>
         )
     }

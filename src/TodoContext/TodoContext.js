@@ -11,17 +11,38 @@ const TodoContext = React.createContext();
         const [searchValue, setSearchValue] = useState("");
 
         const [openModal,setOpenModal] = useState(false);
-        
 
         const completedTodos = todos.filter( element => !!element.completada).length;
+        
         const totalTodos = todos.length;
 
+        //encapsulamiento de Confetti para que funcione independiente
+        /*  const [openConfetti,setOpenConfetti] = useState(false);  
+       
+         useEffect(()=>{
+            if(totalTodos && totalTodos===completedTodos){
+                setOpenConfetti(true)
+            } else{
+                setOpenConfetti(false)
+            }
+        },[completedTodos]) */
 
         const searchedTodos = todos.filter(
             element => {
             return element.text.toLowerCase().includes(searchValue.toLowerCase())
             }
             );
+
+
+
+        const addTodo=(text)=>{
+            const newTodos = [...todos];
+            newTodos.push({
+                text:text,
+                completada:false
+            })
+            saveTodos(newTodos)
+        }
 
         const onCompleteTodo = (text)=>{
             const todosActualizados = todos.map((e)=>{
@@ -31,7 +52,7 @@ const TodoContext = React.createContext();
                 return e;
             });
             saveTodos(todosActualizados)
-            }
+        }
 
         const onDeleteTodo = (text) => {
             const tareasActualizadas = todos.filter((e)=> e.text !== text)
@@ -51,7 +72,10 @@ const TodoContext = React.createContext();
             onCompleteTodo,
             onDeleteTodo,
             openModal,
-            setOpenModal
+            setOpenModal,
+            /* openConfetti, */ //encapsulamiento de Confetti para que funcione independiente
+            addTodo
+    
         }} >
             {children}
         </TodoContext.Provider>

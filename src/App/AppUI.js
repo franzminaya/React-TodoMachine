@@ -1,4 +1,3 @@
-import { TodoCounter } from '../components/TodoCounter';
 import { TodoSearch } from '../components/TodoSearch';
 import { TodoList } from '../components/TodoList';
 import { TodoItem } from '../components/TodoItem';
@@ -10,10 +9,16 @@ import { TodoContext } from '../TodoContext/TodoContext';
 import './App.css';
 import React from 'react';
 import { Modal } from '../Modal/Modal';
+import { TodoCounter } from '../components/TodoCounter';
+import { TodoForm } from '../components/TodoForm';
+
+
+
 
 
 
 function AppUI(){
+    
 
     const {
         loading,
@@ -22,12 +27,15 @@ function AppUI(){
         onCompleteTodo,
         onDeleteTodo,
         openModal,
-        setOpenModal
+        /* openConfetti */ //encapsulamiento de Confetti para que funcione independiente
     }= React.useContext(TodoContext)
 
     return (
 
         <div className="App">
+           
+           {/* {openConfetti && (<ConfettixD/>)} */}
+
             <TodoCounter />
             <TodoSearch />
 
@@ -49,7 +57,7 @@ function AppUI(){
             </TodoList>
             {openModal &&
                 (<Modal>
-                La funcionalidad de crear TODOS
+                    <TodoForm/>
                 </Modal>)
             }
 

@@ -12,10 +12,11 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(168,167,167,1) 100%);
+  /* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(168,167,167,1) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
+  background-attachment: fixed;*/
+  text-align: center; 
  
 }
+

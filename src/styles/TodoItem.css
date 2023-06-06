@@ -72,3 +72,10 @@
     color: red;
     text-decoration: line-through;
 }
+
+@media (max-width: 600px) {
+    .todoItem{
+        font-size: 16px;
+    }
+    
+  }

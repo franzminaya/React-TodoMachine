@@ -2,11 +2,13 @@
 .todoCounter{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300; 
+    color: white;
 }
 
 .todoCounter span{
     font-weight: bold;
     font-size: 35px;
+    color: #f0da4fec;
 }
 
 .congrat-gif{

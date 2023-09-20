@@ -4,9 +4,9 @@ import { useState } from "react";
 
 const TodoContext = React.createContext();
 
-    function TodoProvider({children}){
+    function useTodos(){
 
-        const{item:todos,saveItem:saveTodos,loading,error} = useLocalStoragexD('TODOS_V1',[]);
+        const{item:todos,saveItem:saveTodos,loading,error,sincronize:sincronizeTodos} = useLocalStoragexD('TODOS_V1',[]);
 
         const [searchValue, setSearchValue] = useState("");
 
@@ -16,23 +16,12 @@ const TodoContext = React.createContext();
         
         const totalTodos = todos.length;
 
-        //encapsulamiento de Confetti para que funcione independiente
-        /*  const [openConfetti,setOpenConfetti] = useState(false);  
-       
-         useEffect(()=>{
-            if(totalTodos && totalTodos===completedTodos){
-                setOpenConfetti(true)
-            } else{
-                setOpenConfetti(false)
-            }
-        },[completedTodos]) */
 
         const searchedTodos = todos.filter(
             element => {
             return element.text.toLowerCase().includes(searchValue.toLowerCase())
             }
-            );
-
+        );
 
 
         const addTodo=(text)=>{
@@ -44,6 +33,7 @@ const TodoContext = React.createContext();
             saveTodos(newTodos)
         }
 
+
         const onCompleteTodo = (text)=>{
             const todosActualizados = todos.map((e)=>{
                 if(e.text===text){
@@ -54,14 +44,14 @@ const TodoContext = React.createContext();
             saveTodos(todosActualizados)
         }
 
+        
         const onDeleteTodo = (text) => {
             const tareasActualizadas = todos.filter((e)=> e.text !== text)
             saveTodos(tareasActualizadas)
             }
 
 
-        return(
-        <TodoContext.Provider value={{
+        return{
             loading,
             error,
             completedTodos,
@@ -73,14 +63,10 @@ const TodoContext = React.createContext();
             onDeleteTodo,
             openModal,
             setOpenModal,
-            /* openConfetti, */ //encapsulamiento de Confetti para que funcione independiente
-            addTodo
+            addTodo,
+            sincronizeTodos
     
-        }} >
-            {children}
-        </TodoContext.Provider>
-        );
-        
+        };       
     }
 
-export { TodoContext, TodoProvider };
+export { useTodos};

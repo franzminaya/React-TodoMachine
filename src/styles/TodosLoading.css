@@ -4,25 +4,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
     position: absolute;
-
     animation: loader 5s linear forwards;
+    z-index: 2;
 }
-@keyframes loader {
-    0% {
-        opacity: 1;
-        visibility: visible;
+    @keyframes loader {
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+        95% {
+            opacity: 1;
+            visibility: visible;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
-    95% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
 
 
 .loader div { 
@@ -38,24 +37,24 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 25px;
-
+    color: white;
     animation: view 1.5s ease-in-out infinite;
 }
 
-@keyframes view {
-    0% {
-        opacity: 1;
-        visibility: visible;
+    @keyframes view {
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+        45% {
+            opacity: 0.1;
+            visibility: visible;
+        }
+        95% {
+            opacity: 1;
+            visibility: hidden;
+        }
     }
-    45% {
-        opacity: 0.1;
-        visibility: visible;
-    }
-    95% {
-        opacity: 1;
-        visibility: hidden;
-    }
-}
 
 .loader div:nth-child(1) {
     background:#5d5d7c;

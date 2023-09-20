@@ -2,11 +2,13 @@ import React from "react";
 import "../styles/EmptyTodos.css"
 
 
-function EmptyTodos(){
+function EmptyTodos({totalTodos}){
 
-    return(      
+    
+        return(
             <p>Crea tu primer TODO!!</p>
-    )
+   )
+        
 }
 
 export { EmptyTodos }

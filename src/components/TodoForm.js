@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import "../styles/TodoForm.css"
-import { TodoContext } from "../TodoContext/TodoContext";
+import { TodoContext } from "../App/useTodos";
 
-function TodoForm(){
-    const{
-        addTodo,
-        setOpenModal
-    }=React.useContext(TodoContext)
+function TodoForm({addTodo,setOpenModal}){
 
     const [modalTextValue,setModalTextValue] =useState("");
 
@@ -23,7 +19,6 @@ function TodoForm(){
 
     const onChange =(event)=>{
         setModalTextValue(event.target.value)
-        console.log(event.target.value)
     }
 
 

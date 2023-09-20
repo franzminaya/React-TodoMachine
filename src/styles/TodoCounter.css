@@ -1,15 +1,21 @@
-
-.todoCounter{
+.todoCounter ,.todoCounter-loading{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300; 
     color: white;
 }
 
-.todoCounter span{
+.todoCounter-loading{
+    opacity: 20%;
+
+}
+
+.todoCounter span,.todoCounter-loading span{
     font-weight: bold;
     font-size: 35px;
     color: #f0da4fec;
 }
+
+
 
 .congrat-gif{
     width: 10vw;
@@ -34,12 +40,12 @@
   }
 
 @media (max-width: 600px) {
-    .todoCounter{
+    .todoCounter,.todoCounter-loading{
         font-size: 20px;
         margin-top: 20px;
         
     }
-    .todoCounter span{
+    span{
         font-size: 25px;
     }
     

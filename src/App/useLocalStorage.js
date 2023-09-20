@@ -6,6 +6,7 @@ function useLocalStoragexD(itemName, initialValue){
     const [item, setItem] = useState(initialValue);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
+    const [sincronizedItem, setSincronizedItem] = useState(true);
 
     
 
@@ -20,27 +21,32 @@ function useLocalStoragexD(itemName, initialValue){
           parsedItem=initialValue;
         }else{
           parsedItem = JSON.parse(localStorageItem)
-          setItem (parsedItem)
+          
         }
-        setLoading(false)
+        setItem (parsedItem);
+        setLoading(false);
+        setSincronizedItem(true);
       }catch(error){
         setLoading(false)
         setError(true)
       }
      }, 3000);
    
-    },[setItem])
-
-    
+    },[sincronizedItem])
   
-    
   
     const saveItem = (nuevosItem) =>{
       localStorage.setItem(itemName,JSON.stringify(nuevosItem));
       setItem(nuevosItem)
     };
+
+
+    const sincronize = () =>{
+      setLoading(true);
+      setSincronizedItem(false)
+    }
   
-    return {item,saveItem,loading,error};
+    return {item,saveItem,loading,error,sincronize};
   
   }
 

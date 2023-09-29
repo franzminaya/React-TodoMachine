@@ -28,7 +28,7 @@ function TodoForm({addTodo,setOpenModal}){
         onSubmit={onSubmit}>
             <div className="TodoForm-gifContainer">
                 <label className="modal-label">Escribe tu nuevo TODO</label>
-                <img className="TodoForm-gif" src="https://i.pinimg.com/originals/d0/6f/3f/d06f3f7e02bbf6f1277ae8bbb431995c.gif"/>
+                <img className="TodoForm-gif" src="https://i.pinimg.com/originals/d0/6f/3f/d06f3f7e02bbf6f1277ae8bbb431995c.gif" alt="Imagen de el gato escribiendo"/>
             </div>
 
             <textarea placeholder="Escribe tu nuevo Todo..."  onChange={onChange} />

@@ -1,81 +1,73 @@
-.todoItem{
-    display: flex;
-    width: 100%;
-    justify-content: flex-start;
-    padding: 10px;
-    margin-top: 20px;
-    box-shadow: grey 1px 1px 4px 1px;
-    border: none;
-    border-radius: 5px;
-    font-size: 22px;
-    align-items: center;
-    color: white;
-    position: relative;
-
+.todoItem {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: grey 1px 1px 4px 1px;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  align-items: center;
+  color: white;
+  position: relative;
 }
-.text{
-    margin-right: 10px;
-    font-family: 'Indie Flower', cursive;
-}
-
-.todoItem:nth-child(3n + 1){
-    background-color: #1b1b32;
-    
-}
-.todoItem:nth-child(3n + 2){
-    background-color: #2a2a40;
-
-}
-.todoItem:nth-child(3n + 3){
-    background-color: #3b3b4f;
-
+.text {
+  margin-right: 10px;
+  font-family: "Indie Flower", cursive;
 }
 
-.todoItem:hover{
-    background-color: rgba(35, 35, 35, 0.524);
-    transition: 0.2s;
+.todoItem:nth-child(3n + 1) {
+  background-color: #1b1b32;
+}
+.todoItem:nth-child(3n + 2) {
+  background-color: #2a2a40;
+}
+.todoItem:nth-child(3n + 3) {
+  background-color: #3b3b4f;
 }
 
-.check-icon{
-    width: 25px;
-    height: 25px;
-    min-width: 20px;
-    
+.todoItem:hover {
+  background-color: rgba(35, 35, 35, 0.524);
+  transition: 0.2s;
 }
 
-.icon{
-    color: white;
-    cursor: pointer;
-    transition: 1s;
-    margin: 0 10px;
- 
+.check-icon {
+  width: 25px;
+  height: 25px;
+  min-width: 20px;
 }
 
-.icon:hover{
-    transform: scale(1.4);
-    transition: 0.2s;
+.icon {
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+  margin: 0 10px;
 }
 
-.delete-icon{
-    width: 30px;
-    height: 30px;
-    min-width: 25px;
-    position: absolute;
-    left: 93%;
-    bottom: 60%;
-    box-shadow: 0px 0px 4px 2px;
-    border-radius: 10px;
+.icon:hover {
+  transform: scale(1.4);
+  transition: 0.2s;
 }
 
-.completed{
-    
-    color: red;
-    text-decoration: line-through;
+.delete-icon {
+  width: 30px;
+  height: 30px;
+  min-width: 25px;
+  position: absolute;
+  left: 93%;
+  bottom: 60%;
+  box-shadow: 0px 0px 4px 2px;
+  border-radius: 10px;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
 }
 
 @media (max-width: 600px) {
-    .todoItem{
-        font-size: 16px;
-    }
-    
+  .todoItem {
+    font-size: 16px;
   }
+}

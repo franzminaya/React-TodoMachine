@@ -1,82 +1,82 @@
 .loader {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    animation: loader 5s linear forwards;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  animation: loader 5s linear forwards;
+  z-index: 2;
 }
-    @keyframes loader {
-        0% {
-            opacity: 1;
-            visibility: visible;
-        }
-        95% {
-            opacity: 1;
-            visibility: visible;
-        }
-        100% {
-            opacity: 0;
-            visibility: hidden;
-        }
-    }
-
-
-.loader div { 
-    width: 3vh;
-    height: 3vh;
-    border-radius: 50%;
-    margin: 8px;
-    transform: scale(0);
-    animation: scaling 1.8s ease-in-out infinite;
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
-.loader-text{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    color: white;
-    animation: view 1.5s ease-in-out infinite;
+.loader div {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  margin: 8px;
+  transform: scale(0);
+  animation: scaling 1.8s ease-in-out infinite;
 }
 
-    @keyframes view {
-        0% {
-            opacity: 1;
-            visibility: visible;
-        }
-        45% {
-            opacity: 0.1;
-            visibility: visible;
-        }
-        95% {
-            opacity: 1;
-            visibility: hidden;
-        }
-    }
+.loader-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: white;
+  animation: view 1.5s ease-in-out infinite;
+}
+
+@keyframes view {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  45% {
+    opacity: 0.1;
+    visibility: visible;
+  }
+  95% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
 
 .loader div:nth-child(1) {
-    background:#5d5d7c;
-    animation-delay: 0.2s;
+  background: #5d5d7c;
+  animation-delay: 0.2s;
 }
 .loader div:nth-child(2) {
-    background: #414162;
-    animation-delay: 0.4s;
+  background: #414162;
+  animation-delay: 0.4s;
 }
 .loader div:nth-child(3) {
-    background:  #1b1b32;
-    animation-delay: 0.6s;
+  background: #1b1b32;
+  animation-delay: 0.6s;
 }
 
 @keyframes scaling {
-    0% ,100% {
-        transform: scale(0.2);
-    }
-    40% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1);
-    }
+  0%,
+  100% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1);
+  }
 }

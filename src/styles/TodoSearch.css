@@ -1,81 +1,72 @@
-.label-container{
+.label-container {
+  width: 45vw;
+  min-width: 10px;
+  height: 32px;
+  padding: 0 5px;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 25px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+
+  animation-name: animacionAncho;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes animacionAncho {
+  0% {
+    opacity: 10%;
+    width: 10px;
+  }
+
+  100% {
+    opacity: 100%;
     width: 45vw;
-    min-width: 10px;
-    height: 32px;
-    padding: 0 5px;
-    border-radius: 5px;
-    outline: none;
-    margin-top: 25px;
-    border: 1px solid grey;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-
-    animation-name: animacionAncho;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    
+  }
 }
 
-    @keyframes animacionAncho {
-        0% {
-            opacity: 10%;
-            width: 10px;
-        }
-    
-        100% {
-            opacity: 100%;
-            width: 45vw;
-        }
-    }
-   
-
-.label-container:focus-within{
-    border: 1px solid skyblue;
-    border-radius: 8px;
+.label-container:focus-within {
+  border: 1px solid skyblue;
+  border-radius: 8px;
 }
 
-.inputSearch{
-    height: 100%;
-    width: 90%;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    font-family: 'Indie Flower', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    transition: 2s;
-  
+.inputSearch {
+  height: 100%;
+  width: 90%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: "Indie Flower", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  transition: 2s;
 }
 
-
-.search-icon{
-    color: grey;
+.search-icon {
+  color: grey;
 }
-
-
 
 @media (max-width: 600px) {
-    .label-container{
-   
-        width: 215px;
-        animation-name: animacionAncho;
-        animation-duration: 3s;
-        animation-timing-function: ease-out;
-        
-    }
-    
-    @keyframes animacionAncho {
-        0% {
-            opacity: 10%;
-            width: 10px;
-        }
-      
-        100% {
-            opacity: 100%;
-            width: 215px;
-        }
-      }
-      
+  .label-container {
+    width: 215px;
+    animation-name: animacionAncho;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
   }
+
+  @keyframes animacionAncho {
+    0% {
+      opacity: 10%;
+      width: 10px;
+    }
+
+    100% {
+      opacity: 100%;
+      width: 215px;
+    }
+  }
+}

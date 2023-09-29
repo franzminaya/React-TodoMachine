@@ -1,52 +1,47 @@
-.todoCounter ,.todoCounter-loading{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300; 
-    color: white;
+.todoCounter,
+.todoCounter-loading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: white;
 }
 
-.todoCounter-loading{
-    opacity: 20%;
-
+.todoCounter-loading {
+  opacity: 20%;
 }
 
-.todoCounter span,.todoCounter-loading span{
-    font-weight: bold;
-    font-size: 35px;
-    color: #f0da4fec;
+.todoCounter span,
+.todoCounter-loading span {
+  font-weight: bold;
+  font-size: 35px;
+  color: #f0da4fec;
 }
 
-
-
-.congrat-gif{
-    width: 10vw;
-    min-width: 95px;
+.congrat-gif {
+  width: 10vw;
+  min-width: 95px;
 }
 
-.confeti{
-    width: 60vw;
-    height: 100%;
-    min-height: 100vh;
-    margin-left: 20vw;
-
- 
+.confeti {
+  width: 60vw;
+  height: 100%;
+  min-height: 100vh;
+  margin-left: 20vw;
 }
 
 @media (max-width: 900px) {
-    .confeti{
-        width: 100vw;
-        margin-left: 0;
-    }
-    
+  .confeti {
+    width: 100vw;
+    margin-left: 0;
   }
+}
 
 @media (max-width: 600px) {
-    .todoCounter,.todoCounter-loading{
-        font-size: 20px;
-        margin-top: 20px;
-        
-    }
-    span{
-        font-size: 25px;
-    }
-    
+  .todoCounter,
+  .todoCounter-loading {
+    font-size: 20px;
+    margin-top: 20px;
   }
+  span {
+    font-size: 25px;
+  }
+}

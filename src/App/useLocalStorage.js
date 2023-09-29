@@ -52,10 +52,3 @@ function useLocalStoragexD(itemName, initialValue){
 
 export {useLocalStoragexD}
 
-/* const defaultTodos =[
-  {text:"Aprender React default",completada:false},
-  {text:"Aprender NextJs default",completada:false},
-  {text:"Hacer lo de DHM default",completada:false},
-  {text:"Conseguir Trabajo en Julio",completada:false}
-]; 
-  localStorage.setItem('TODOS_V1',JSON.stringify(defaultTodos)) */
